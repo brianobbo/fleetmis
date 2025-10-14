@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\DriverController;
 use App\Http\Controllers\DriverAssignmentController;
+use App\Http\Controllers\VehicleAuthorizationController;
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
@@ -16,3 +17,6 @@ Route::resource('drivers', DriverController::class);
 
 // Driver Assignment routes
 Route::resource('driver-assignments', DriverAssignmentController::class);
+
+// Vehicle Authorization routes
+Route::resource('vehicle-authorizations', VehicleAuthorizationController::class);
