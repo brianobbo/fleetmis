@@ -38,6 +38,11 @@
                             <i class="fas fa-clipboard-list"></i> Assignments
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('vehicle-authorizations.index') }}">
+                            <i class="fas fa-file-signature"></i> Authorizations
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
