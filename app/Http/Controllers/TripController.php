@@ -73,12 +73,13 @@ class TripController extends Controller
         return $request->validate([
             'driver_id' => 'nullable|exists:drivers,id',
             'vehicle_id' => 'nullable|exists:vehicles,id',
-            'time_out' => 'nullable|date',
+            // Accept HTML datetime-local format
+            'time_out' => 'nullable|date_format:Y-m-d\\TH:i',
             'odometer_start' => 'nullable|integer|min:0',
             'destination' => 'nullable|string|max:255',
             'purpose_of_trip' => 'nullable|string',
             'fuel_before_trip' => 'nullable|integer|min:0',
-            'time_in' => 'nullable|date|after_or_equal:time_out',
+            'time_in' => 'nullable|date_format:Y-m-d\\TH:i|after_or_equal:time_out',
             'odometer_end' => 'nullable|integer|min:0',
             'fuel_after_trip' => 'nullable|integer|min:0',
             'comments' => 'nullable|string',
