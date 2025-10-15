@@ -43,6 +43,11 @@
                             <i class="fas fa-file-signature"></i> Authorizations
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('trips.index') }}">
+                            <i class="fas fa-road"></i> Trips
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
