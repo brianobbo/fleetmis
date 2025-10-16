@@ -6,6 +6,34 @@
     <title>@yield('title', 'Fleet Management System')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Fieldset-as-card styling for production-ready form sections */
+        fieldset.fieldset-card {
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: .5rem;
+            padding: 1rem 1.25rem 1.25rem;
+            margin-bottom: 1rem;
+            background-color: #fff;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+        }
+        fieldset.fieldset-card > legend {
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0 .5rem;
+            width: auto;
+            margin: 0;
+            transform: translateY(-0.75rem);
+            background: #fff;
+            color: #212529;
+        }
+        /* Tighter, consistent spacing within fieldsets */
+        .fieldset-card .row + .row { margin-top: .25rem; }
+        .form-section-grid { row-gap: .5rem; }
+        /* Consistent help text size */
+        .fieldset-card .form-text { font-size: .875rem; }
+        /* Mark required labels with an asterisk when using .required on label */
+        label.required::after { content: ' *'; color: var(--bs-danger); }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
